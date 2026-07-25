@@ -11,14 +11,14 @@ description: A high level guide to Integrated Strategies damage calculations
 </div>
 
 
-
-
-{/* ## Collectibles (written by Die Alive) */}
 ## Introduction
-Collectibles are one of the most important factors in IS to improve the success rate of the run. Being able to identify what collectible is best to pick on a given situation will contribute to this. In order to know which collectible could benefit your squad better there are multiple factors to consider; such as knowing, throughout the run, what set of collectibles are essential to clear the endings and/or stages required and which are not, which collectibles would be more important earlier than later, and which collectibles boost your operator damage, HP, and reduce damage taken better, this article focuses on the last part.
+Collectibles are one of the most important factors in IS to improve the success rate of the run.
+Being able to identify what collectible is best to pick on a given situation will contribute to this.
+In order to know which collectible could benefit your squad better there are multiple factors to consider; such as knowing, throughout the run, what set of collectibles are essential to clear the endings and/or stages required and which are not, which collectibles would be more important earlier than later, and which collectibles boost your operator's damage, HP, and reduce damage taken better, this article focuses on the last part.
 
 ## Stats calculations in IS
-In arknights there are four main types of damage: Physical, Arts, True, and Elemental damage. Physical and Arts damage being the most common. In addition to these, there is a 5th form of applying damage referred to in game as Elemental Injury, this instead fills a new elemental-tied circular meter according to the respective element:
+In arknights there are four main types of damage: Physical, Arts, True, and Elemental damage.
+Physical and Arts damage being the most common. In addition to these, there is a 5th form of applying damage referred to in game as Elemental Injury, this instead fills a new elemental-tied circular meter according to the respective element:
 <ul style={{ paddingLeft: '2.5em' }}>
   <li style={{ display: 'flex', alignItems: 'center', marginBottom: '0.25em', position: 'relative' }}>
     <span style={{ position: 'absolute', left: '-1.2em' }}>•</span>
@@ -67,9 +67,9 @@ The following diagrams explain how the attack stats of an operator are carried o
 
 Base ATK: refers to the base attack of the operator, this is visible on the operator interface before starting a stage.
 
-External modifiers: refers to any modifier that affects the given stat (ATK, HP, DEF) that cannot change within the stage, because of this reason it is easy to identify which collectibles could fall into this type of modifier. These stats are often determined immediately when the stage has begun and are generally visible on the operator interface before they are deployed. In this case we will be using ATK as an example. All IS have a skill tree which buffs all operators by a certain percentage, in IS5 for example, this is an extra 30% (after DLC2) for Atk, Hp, and DEF, and is considered as an external buff.
+External/unconditional/out-of-stage modifiers: refers to any modifier that affects the given stat (ATK, HP, DEF) that cannot change within the stage, because of this reason it is easy to identify which collectibles could fall into this type of modifier. These stats are often determined immediately when the stage has begun and are generally visible on the operator interface before they are deployed. In this case we will be using ATK as an example. All IS have a skill tree which buffs all operators by a certain percentage, in IS5 for example, this is an extra 30% (after DLC2) for Atk, Hp, and DEF, and is considered as an external buff.
 
-Internal modifiers: refers to any dynamic modifier that affects the given stat (ATK, HP, DEF) that can conditionally change within the stage. Operators’ skills that are generally denoted as “ATK +x%” are also considered as internal modifiers (Not to be confused with ATK Scale skills, denoted as dealing x% ATK). While most relics are represented this way, the rule of thumb is that if they cannot change given a certain condition within the stage, they are a external modifier instead. For example, Emperor’s Favor, which gives +15% ATK to melee units is a external modifier, since “melee” is an inherent attribute of operators that doesn’t depend on the stage. These modifiers are generally visible on the operator interface only after they are deployed.
+Internal/conditional/in-stage modifiers: refers to any dynamic modifier that affects the given stat (ATK, HP, DEF) that can conditionally change within the stage. Operators’ skills that are generally denoted as “ATK +x%” are also considered as internal modifiers (Not to be confused with ATK Scale skills, denoted as dealing x% ATK). While most relics are represented this way, the rule of thumb is that if they cannot change given a certain condition within the stage, they are a external modifier instead. For example, Emperor’s Favor, which gives +15% ATK to melee units is a external modifier, since “melee” is an inherent attribute of operators that doesn’t depend on the stage. These modifiers are generally visible on the operator interface only after they are deployed.
 
 Inspire: refers to the specific “Inspire” buff obtained from bards, such as Heidi and Skalter.
 
@@ -116,7 +116,7 @@ In this example we are on an IS5 run with extra damage collectibles which furthe
 * External modifier: $$ 1 + 0.3 = 1.3 $$
 * Internal modifier: $$ 1 + 2 + 1.5 = 4.5 $$
 
-This results in a total final ATK of $$ 366.9 * 1.3 * 4.5 = 2146 $$, as we see here.
+This results in a total final ATK of $$ 366.9 \cdot 1.3 \cdot 4.5 = 2146 $$, as we see here.
 
 <div style={{ display: "flex", justifyContent: "center", alignItems: "center"  }}>
 ![Młynar's final ATK](/guides/general-knowledge/damage-calculations/mlynar-final-atk.png)
@@ -404,6 +404,18 @@ Additionally, while defense does not stack with difficulty or floors, enemy defe
 Enemy HP reduction collectibles are particularly potent because killing weaker enemies due to them having less HP is equivalent to enemies taking an overall damage increase debuff.
 Having Profound Silence applied on enemies is equivalent to having a $\frac{1}{1-0.2} = 25\%$ overall damage increase to all your DPS operators.
 
+## Upgrade tree
+Each theme contains an upgrade tree that provides unconditional/out of stage buffs to all operators, with the amount varying as follows:
+<div style={{ display: "flex", justifyContent: "center" }}>
+| Theme | ATK  | HP   | DEF  |
+|:-----:|:----:|:----:|:----:|
+| IS2   | +10% | +10% | +10% |
+| IS3   | +20% | +30% | +30% |
+| IS4   | +23% | +23% | +23% |
+| IS5   | +30% | +30% | +30% |
+| IS6   | +26% | +40% | +30% |
+
+</div>
 
 ## Movement speed
 In arknights, enemies move at a certain speed, this is referred to as movement speed and is denoted by MS or MSPD.
